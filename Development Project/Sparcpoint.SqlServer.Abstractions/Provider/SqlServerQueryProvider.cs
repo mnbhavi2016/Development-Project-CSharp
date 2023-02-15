@@ -132,7 +132,7 @@ namespace Sparcpoint.SqlServer.Abstractions
 
         public SqlServerQueryProvider AddParameter(string name, object value)
             => Execute(() => _Parameters.Add(name, value));
-        
+
         public string GetNextParameterName(string parameterName)
             => $"{parameterName}{_CurrentParameterId++}";
 
